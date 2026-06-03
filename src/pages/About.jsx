@@ -27,10 +27,10 @@ function About() {
           <br /><br />
 
           Every timepiece is crafted with attention
-          to detail and premium quality materials.
+          to detail and premium quality materials .
 
         </p>
-
+        
       </div>
 
     </div>
