@@ -15,7 +15,7 @@ function Admin() {
     try {
 
       await axios.post(
-        "http://localhost:5001/api/products",
+        "https://e-backend-scgm.onrender.com/api/products",
         {
           name,
           price,

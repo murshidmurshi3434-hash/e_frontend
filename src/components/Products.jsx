@@ -12,7 +12,7 @@ function Home() {
       try {
 
         const { data } = await axios.get(
-          "http://localhost:5001/api/products"
+          "https://e-backend-scgm.onrender.com/api/products"
         );
 
         setProducts(data);
