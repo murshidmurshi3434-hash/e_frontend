@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Register() {
@@ -10,6 +11,8 @@ function Register() {
 
   const [message, setMessage] = useState("");
 
+  const navigate = useNavigate();
+
   const handleRegister = async (e) => {
 
     e.preventDefault();
@@ -17,7 +20,7 @@ function Register() {
     try {
 
       await axios.post(
-        "http://localhost:5001/api/auth/register",
+        `${import.meta.env.VITE_API_URL}/api/auth/register`,
         {
           email,
           password,
@@ -25,6 +28,7 @@ function Register() {
       );
 
       setMessage("Account created successfully");
+      navigate("/login");
 
     } catch (error) {
 
@@ -36,32 +40,32 @@ function Register() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-8">
 
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="bg-white w-full max-w-md rounded-[20px] shadow-xl p-6 sm:p-8"
+        className="bg-white w-full max-w-md rounded-[40px] shadow-xl p-10"
       >
 
-        <p className="text-gray-500 uppercase tracking-[4px] text-sm">
+        <p className="text-gray-500 uppercase tracking-[4px]">
           Create Account
         </p>
 
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">
+        <h1 className="text-5xl font-bold text-gray-900 mt-4">
           Register
         </h1>
 
         {message && (
-          <p className="mt-4 text-center text-gray-700 text-sm">
+          <p className="mt-6 text-center text-gray-700">
             {message}
           </p>
         )}
 
         <form
           onSubmit={handleRegister}
-          className="mt-6 space-y-4"
+          className="mt-10 space-y-6"
         >
 
           <input
@@ -71,7 +75,7 @@ function Register() {
             onChange={(e) =>
               setEmail(e.target.value)
             }
-            className="w-full border border-gray-300 p-3 rounded-2xl outline-none focus:border-black"
+            className="w-full border border-gray-300 p-5 rounded-2xl outline-none focus:border-black"
           />
 
           <input
@@ -81,10 +85,10 @@ function Register() {
             onChange={(e) =>
               setPassword(e.target.value)
             }
-            className="w-full border border-gray-300 p-3 rounded-2xl outline-none focus:border-black"
+            className="w-full border border-gray-300 p-5 rounded-2xl outline-none focus:border-black"
           />
 
-          <button className="w-full bg-black text-white py-3 rounded-2xl hover:scale-105 transition">
+          <button className="w-full bg-black text-white py-4 rounded-2xl hover:scale-105 transition">
             Create Account
           </button>
 

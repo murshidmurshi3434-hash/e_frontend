@@ -18,7 +18,7 @@ function Login() {
     try {
 
       const response = await axios.post(
-        "https://e-backend-scgm.onrender.com/api/auth/login",
+        `${import.meta.env.VITE_API_URL}/api/auth/login`,
         {
           email,
           password,
@@ -34,7 +34,7 @@ function Login() {
 
       console.log(response.data);
 
-      window.location.href = "/";
+      navigate("/");
 
     } catch (error) {
 
