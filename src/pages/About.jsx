@@ -1,18 +1,18 @@
 function About() {
   return (
-    <div className="min-h-screen bg-gray-100 px-8 py-20">
+    <div className="min-h-screen bg-gray-100">
 
-      <div className="max-w-5xl mx-auto bg-white rounded-[40px] shadow-lg p-12">
+      <div className="container mx-auto px-4 py-12 max-w-4xl bg-white rounded-[24px] shadow-lg p-8 sm:p-12">
 
-        <p className="text-gray-500 uppercase tracking-[4px]">
+        <p className="text-gray-500 uppercase tracking-[4px] text-sm">
           About Us
         </p>
 
-        <h1 className="text-6xl font-bold text-gray-900 mt-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-4">
           Timeless Luxury
         </h1>
 
-        <p className="text-gray-600 text-lg leading-relaxed mt-10">
+        <p className="text-gray-600 text-base sm:text-lg leading-relaxed mt-6">
 
           CHRONOVA is a premium luxury watch brand
           focused on elegant craftsmanship, modern
@@ -27,7 +27,7 @@ function About() {
           <br /><br />
 
           Every timepiece is crafted with attention
-          to detail and premium quality materials .
+          to detail and premium quality materials.
 
         </p>
         

@@ -10,7 +10,7 @@ function ProductCard({ id, image, title, price }) {
       whileHover={{ y: -10 }}
       transition={{ duration: 0.3 }}
       onClick={() => navigate(`/product/${id}`)}
-      className="bg-white rounded-[30px] overflow-hidden shadow-md hover:shadow-2xl transition duration-300 cursor-pointer"
+      className="bg-white rounded-[30px] overflow-hidden shadow-md hover:shadow-2xl transition duration-300 cursor-pointer flex flex-col h-full"
     >
 
       {/* Product Image */}
@@ -20,31 +20,31 @@ function ProductCard({ id, image, title, price }) {
           transition={{ duration: 0.4 }}
           src={image}
           alt={title}
-          className="w-full h-[300px] object-cover"
+          className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover"
         />
       </div>
 
       {/* Product Info */}
-      <div className="p-6">
+      <div className="p-4 flex-1 flex flex-col">
 
-        <h2 className="text-2xl font-semibold text-gray-800">
+        <h2 className="text-lg sm:text-xl font-semibold text-gray-800">
           {title}
         </h2>
 
-        <p className="text-gray-500 mt-2">
+        <p className="text-gray-500 mt-2 text-sm">
           Premium luxury watch
         </p>
 
-        <div className="flex items-center justify-between mt-6">
+        <div className="flex items-end justify-between mt-4">
 
-          <h3 className="text-2xl font-bold text-black">
+          <h3 className="text-lg sm:text-2xl font-bold text-black">
             ₹{price}
           </h3>
 
           <motion.button
             whileTap={{ scale: 0.9 }}
             whileHover={{ scale: 1.05 }}
-            className="bg-black text-white px-5 py-3 rounded-full"
+            className="bg-black text-white px-4 py-2 rounded-full text-sm"
           >
             Add Cart
           </motion.button>

@@ -39,60 +39,64 @@ function Admin() {
 
   return (
 
-    <div className="min-h-screen bg-gray-100 p-10">
+    <div className="min-h-screen bg-gray-100">
 
-      <div className="max-w-xl mx-auto bg-white p-8 rounded-3xl shadow-lg">
+      <div className="container mx-auto px-4 py-12">
 
-        <h1 className="text-3xl font-bold mb-6">
-          Add Watch
-        </h1>
+        <div className="max-w-xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
 
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-4"
-        >
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4">
+            Add Watch
+          </h1>
 
-          <input
-            type="text"
-            placeholder="Watch Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full border p-4 rounded-xl"
-          />
-
-          <input
-            type="number"
-            placeholder="Price"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-            className="w-full border p-4 rounded-xl"
-          />
-
-          <input
-            type="text"
-            placeholder="Image URL"
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
-            className="w-full border p-4 rounded-xl"
-          />
-
-          <textarea
-            placeholder="Description"
-            value={description}
-            onChange={(e) =>
-              setDescription(e.target.value)
-            }
-            className="w-full border p-4 rounded-xl"
-          />
-
-          <button
-            type="submit"
-            className="w-full bg-black text-white py-4 rounded-xl"
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-3"
           >
-            Add Product
-          </button>
 
-        </form>
+            <input
+              type="text"
+              placeholder="Watch Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full border p-3 rounded-lg"
+            />
+
+            <input
+              type="number"
+              placeholder="Price"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              className="w-full border p-3 rounded-lg"
+            />
+
+            <input
+              type="text"
+              placeholder="Image URL"
+              value={image}
+              onChange={(e) => setImage(e.target.value)}
+              className="w-full border p-3 rounded-lg"
+            />
+
+            <textarea
+              placeholder="Description"
+              value={description}
+              onChange={(e) =>
+                setDescription(e.target.value)
+              }
+              className="w-full border p-3 rounded-lg"
+            />
+
+            <button
+              type="submit"
+              className="w-full bg-black text-white py-3 rounded-lg"
+            >
+              Add Product
+            </button>
+
+          </form>
+
+        </div>
 
       </div>
 

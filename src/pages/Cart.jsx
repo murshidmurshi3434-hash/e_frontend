@@ -14,25 +14,25 @@ function Cart() {
   );
 
   return (
-    <div className="min-h-screen bg-gray-100 px-8 py-20">
+    <div className="min-h-screen bg-gray-100">
 
-      <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto px-4 py-12 max-w-6xl">
 
         {/* Heading */}
-        <h1 className="text-5xl font-bold text-gray-900 mb-12">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-8">
           Shopping Cart
         </h1>
 
         {/* EMPTY CART */}
         {cartItems.length === 0 ? (
 
-          <div className="bg-white rounded-[30px] p-16 text-center shadow">
+          <div className="bg-white rounded-[30px] p-8 sm:p-12 text-center shadow">
 
-            <h2 className="text-3xl font-semibold text-gray-700">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-700">
               Your cart is empty
             </h2>
 
-            <p className="text-gray-500 mt-4">
+            <p className="text-gray-500 mt-3">
               Add luxury watches to your collection.
             </p>
 
@@ -40,7 +40,7 @@ function Cart() {
 
         ) : (
 
-          <div className="grid lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
             {/* CART ITEMS */}
             <div className="lg:col-span-2 space-y-6">
@@ -49,20 +49,20 @@ function Cart() {
 
                 <div
                   key={item.id}
-                  className="bg-white rounded-[30px] p-6 shadow flex items-center gap-6"
+                  className="bg-white rounded-[30px] p-4 sm:p-6 shadow flex flex-col sm:flex-row items-start sm:items-center gap-4"
                 >
 
                   {/* IMAGE */}
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-32 h-32 rounded-[20px] object-cover"
+                    className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-[16px] object-cover"
                   />
 
                   {/* INFO */}
                   <div className="flex-1">
 
-                    <h2 className="text-2xl font-bold text-gray-800">
+                    <h2 className="text-lg sm:text-2xl font-bold text-gray-800">
                       {item.title}
                     </h2>
 
@@ -70,7 +70,7 @@ function Cart() {
                       Quantity: {item.quantity}
                     </p>
 
-                    <h3 className="text-2xl font-bold mt-4">
+                    <h3 className="text-lg sm:text-2xl font-bold mt-3">
                       ₹{item.price}
                     </h3>
 
@@ -79,7 +79,7 @@ function Cart() {
                   {/* REMOVE BUTTON */}
                   <button
                     onClick={() => removeFromCart(item.id)}
-                    className="bg-red-500 text-white px-5 py-3 rounded-full hover:bg-red-600 transition"
+                    className="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition text-sm"
                   >
                     Remove
                   </button>

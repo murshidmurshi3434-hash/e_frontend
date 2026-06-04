@@ -50,32 +50,32 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-8">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
 
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="bg-white w-full max-w-md rounded-[40px] shadow-xl p-10"
+        className="bg-white w-full max-w-md rounded-[20px] shadow-xl p-6 sm:p-8"
       >
 
-        <p className="text-gray-500 uppercase tracking-[4px]">
+        <p className="text-gray-500 uppercase tracking-[4px] text-sm">
           Welcome Back
         </p>
 
-        <h1 className="text-5xl font-bold text-gray-900 mt-4">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">
           Login
         </h1>
 
         {message && (
-          <p className="mt-6 text-center text-gray-700">
+          <p className="mt-4 text-center text-gray-700 text-sm">
             {message}
           </p>
         )}
 
         <form
           onSubmit={handleLogin}
-          className="mt-10 space-y-6"
+          className="mt-6 space-y-4"
         >
 
           <input
@@ -85,7 +85,7 @@ function Login() {
             onChange={(e) =>
               setEmail(e.target.value)
             }
-            className="w-full border border-gray-300 p-5 rounded-2xl outline-none focus:border-black"
+            className="w-full border border-gray-300 p-3 rounded-2xl outline-none focus:border-black"
             required
           />
 
@@ -96,13 +96,13 @@ function Login() {
             onChange={(e) =>
               setPassword(e.target.value)
             }
-            className="w-full border border-gray-300 p-5 rounded-2xl outline-none focus:border-black"
+            className="w-full border border-gray-300 p-3 rounded-2xl outline-none focus:border-black"
             required
           />
 
           <button
             type="submit"
-            className="w-full bg-black text-white py-4 rounded-2xl hover:scale-105 transition"
+            className="w-full bg-black text-white py-3 rounded-2xl hover:scale-105 transition"
           >
             Login
           </button>

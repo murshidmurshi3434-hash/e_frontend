@@ -1,42 +1,46 @@
 function Contact() {
   return (
-    <div className="min-h-screen bg-gray-100 px-8 py-20">
+    <div className="min-h-screen bg-gray-100">
 
-      <div className="max-w-4xl mx-auto bg-white rounded-[40px] shadow-lg p-12">
+      <div className="container mx-auto px-4 py-12">
 
-        <p className="text-gray-500 uppercase tracking-[4px]">
-          Contact Us
-        </p>
+        <div className="max-w-3xl mx-auto bg-white rounded-[20px] shadow-lg p-6 sm:p-10">
 
-        <h1 className="text-6xl font-bold text-gray-900 mt-4">
-          Get In Touch
-        </h1>
+          <p className="text-gray-500 uppercase tracking-[4px] text-sm">
+            Contact Us
+          </p>
 
-        <form className="mt-12 space-y-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mt-4">
+            Get In Touch
+          </h1>
 
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="w-full border border-gray-300 p-5 rounded-2xl outline-none focus:border-black"
-          />
+          <form className="mt-8 space-y-4">
 
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full border border-gray-300 p-5 rounded-2xl outline-none focus:border-black"
-          />
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full border border-gray-300 p-3 sm:p-4 rounded-2xl outline-none focus:border-black"
+            />
 
-          <textarea
-            rows="6"
-            placeholder="Your Message"
-            className="w-full border border-gray-300 p-5 rounded-2xl outline-none focus:border-black"
-          ></textarea>
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full border border-gray-300 p-3 sm:p-4 rounded-2xl outline-none focus:border-black"
+            />
 
-          <button className="bg-black text-white px-10 py-4 rounded-full hover:scale-105 transition">
-            Send Message
-          </button>
+            <textarea
+              rows="5"
+              placeholder="Your Message"
+              className="w-full border border-gray-300 p-3 sm:p-4 rounded-2xl outline-none focus:border-black"
+            ></textarea>
 
-        </form>
+            <button className="w-full bg-black text-white px-6 py-3 rounded-full hover:scale-105 transition">
+              Send Message
+            </button>
+
+          </form>
+
+        </div>
 
       </div>
 
